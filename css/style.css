@@ -1,0 +1,463 @@
+/* -------------------------------------------------------------------------- */
+/*                                Global Style                                */
+/* -------------------------------------------------------------------------- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background: var(--bg-color);
+}
+
+.btn {
+  color: white;
+  font-family: var(--open-sans);
+  font-size: 14px;
+  background-color: var(--main-color);
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  transition: var(--transition);
+}
+.btn:hover,
+.btn:focus-visible {
+  background-color: rgb(0, 142, 202);
+  color: white;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  color: white;
+  background-color: var(--main-color);
+}
+/* =================================================== */
+:root {
+  --bg-color: rgb(30, 32, 43);
+  --bg-second: rgb(38, 41, 54);
+  --main-color: rgb(0, 170, 240);
+  --open-sans: "Open Sans", sans-serif;
+  --transition: all 150ms ease-out;
+}
+
+.bg-main {
+  background-color: var(--bg-color) !important;
+}
+.bg-second {
+  background-color: var(--bg-second) !important;
+}
+
+/* ========================================== */
+nav {
+  background-color: var(--bg-color);
+  color: white;
+}
+
+.navbar-btn {
+  color: white;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 50rem;
+  padding: 15px calc(15px * 1.3) 15px calc(15px * 1.3);
+
+  transition: var(--transition);
+}
+.navbar-btn:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+.navbar-btn:active {
+  color: white;
+  border-color: transparent;
+}
+
+.navbar-btn i {
+  font-size: 20px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ============================================= */
+nav .navbar-brand .img {
+  width: 45px;
+}
+
+nav .navbar-brand .name h1 {
+  font-family: var(--open-sans);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0;
+}
+nav .navbar-brand .name span {
+  font-family: var(--open-sans);
+  color: rgb(216, 216, 216);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+}
+
+/* ================================================= */
+.nav-link {
+  /* Bootstrap Variables */
+  --bs-navbar-nav-link-padding-x: 20px;
+
+  color: white;
+  font-family: var(--open-sans);
+  font-size: 15px;
+  margin-left: 10px;
+  padding: 5px 20px 5px 20px;
+  border: 2px solid transparent;
+  border-radius: 50rem;
+
+  transition: color 150ms ease-out, border 250ms ease-in;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin-top: 4rem;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .nav-link {
+    color: white;
+    background-color: var(--bg-second);
+    font-family: var(--open-sans);
+    font-size: 14px;
+
+    text-align: center;
+    padding: 15px 0 15px 0;
+    margin-left: 0;
+    border: 2px solid transparent;
+    border-bottom: 1px solid rgb(59, 59, 59);
+    border-radius: 0;
+
+    transition: color 150ms ease-out, border 250ms ease-in;
+  }
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.show,
+  .nav-link:focus,
+  .nav-link:hover {
+    color: var(--main-color);
+    border-color: transparent;
+    border-bottom: 1px solid var(--main-color);
+  }
+
+  .nav-item:nth-child(5) .nav-link {
+    border-bottom: none;
+  }
+}
+
+/* ============================================================= */
+#searchAndWeather {
+  background-color: var(--bg-color);
+  background-image: url(../imgs/divo2.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+#searchAndWeather #locationHolder {
+  cursor: text;
+}
+
+#searchAndWeather .row-minus {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+#contact #searchAndWeather {
+  background-image: none;
+}
+
+#locationHolder {
+  background-color: var(--bg-second);
+  color: white;
+}
+
+#locationHolder .path {
+  font-family: var(--open-sans);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  color: rgb(191, 193, 200);
+}
+#locationHolder .path > span {
+  color: white;
+}
+#locationHolder .path > a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================== */
+#location {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  caret-color: white;
+}
+#location::placeholder {
+  color: rgba(216, 216, 216, 0.63);
+}
+/* ========================================= */
+#searchAndWeather .card .card-header {
+  background-color: rgb(45, 48, 61);
+  color: rgb(191, 193, 200);
+  font-family: var(--open-sans);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#searchAndWeather .card .card-header:first-child {
+  border-radius: 10px 0 0 0;
+}
+#searchAndWeather .card.small-card .card-header:first-child {
+  background-color: rgb(34, 37, 48);
+  border-radius: 0 0 0 0;
+}
+#searchAndWeather
+  .col-lg-4:nth-child(3)
+  .card.small-card
+  .card-header:first-child {
+  background-color: rgb(45, 48, 61);
+  border-radius: 0 10px 0 0;
+}
+
+#searchAndWeather .card .card-body {
+  background-color: rgb(50, 53, 68);
+  font-family: var(--open-sans);
+  color: rgb(191, 193, 200);
+  border-radius: 0 0 0 10px;
+  height: 380px;
+}
+#searchAndWeather .card.small-card .card-body {
+  background: var(--bg-second);
+  font-family: var(--open-sans);
+  border-radius: 0 0 0 0;
+}
+#searchAndWeather .col-lg-4:nth-child(3) .card .card-body {
+  background-color: rgb(50, 53, 68);
+  border-radius: 0 0 10px 0;
+}
+
+#searchAndWeather .card .card-body .card-title {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+#searchAndWeather .card .card-body .temperature .degree {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 135px;
+  color: white;
+}
+#searchAndWeather .card.small-card .card-body .temperature .degree {
+  font-size: 24px;
+  line-height: 36px;
+}
+#searchAndWeather .card.small-card .card-body .temperature .degree-small {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgb(191, 193, 200);
+}
+
+#searchAndWeather .card .card-body .temperature .img {
+  width: 80px;
+}
+
+#searchAndWeather .card .card-body .temperature .clouds {
+  color: var(--main-color);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+#searchAndWeather .card .card-body .wind-item {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+}
+#searchAndWeather .card .card-body .wind-item i {
+  font-size: 18px;
+}
+
+/* Contact Page */
+#contact #searchAndWeather .img img {
+  height: 250px;
+}
+
+#contact #searchAndWeather .contact-item {
+  font-family: var(--open-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  color: rgb(191, 193, 200);
+}
+
+#contact #searchAndWeather .contact-item i {
+  color: var(--main-color);
+  font-size: 16px;
+}
+
+#contact #searchAndWeather .details {
+  font-family: var(--open-sans);
+}
+#contact #searchAndWeather .details > h4 {
+  font-size: 36px;
+  font-weight: 300;
+  color: white;
+}
+#contact #searchAndWeather .details > p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: rgb(191, 193, 200);
+}
+
+#contact #searchAndWeather .input-fields .form-control {
+  background-color: transparent;
+  color: white;
+  border-radius: 50rem;
+  border: 2px solid rgb(60, 64, 68);
+  padding: 13px;
+
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--open-sans);
+}
+#contact #searchAndWeather .input-fields .form-control::placeholder {
+  color: rgb(97, 104, 110);
+}
+#contact #searchAndWeather .input-fields .form-control:focus {
+  border-color: var(--main-color);
+  box-shadow: none;
+}
+
+#contact #searchAndWeather .input-fields textarea.form-control {
+  /* border-radius: 25px; */
+  height: 150px;
+}
+
+#contact #searchAndWeather .input-fields button {
+  width: 80px;
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+/* ======================================================= */
+footer {
+  background-color: rgb(38, 41, 54);
+}
+
+/* ========================================== */
+footer #newsLetter {
+  cursor: text;
+}
+
+footer #newEmail {
+  background-color: transparent;
+  width: 100%;
+  color: white;
+  outline: none;
+  border: none;
+  caret-color: white;
+}
+footer #newEmail::placeholder {
+  color: rgba(216, 216, 216, 0.63);
+}
+/* ==================================== */
+footer a.icon {
+  width: 40px;
+  height: 40px;
+
+  background-color: rgb(30, 32, 43);
+  color: var(--main-color);
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: var(--transition);
+}
+footer a.icon:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+footer a.icon:active {
+  background-color: rgb(30, 32, 43);
+  color: var(--main-color);
+}
+
+footer span.copyright {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  color: rgb(191, 193, 200);
+
+  top: -30px;
+}
+/* ====================================== */
+@media (max-width: 991px) {
+  footer .icons {
+    justify-content: center;
+  }
+  footer div.copyright {
+    display: flex;
+    justify-content: center;
+  }
+  footer span.copyright {
+    top: 10px;
+  }
+}
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 991px) {
+  #searchAndWeather .card .card-header:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  #searchAndWeather .card.small-card .card-header:first-child {
+    border-radius: 0 0 0 0;
+  }
+  #searchAndWeather
+    .col-lg-4:nth-child(3)
+    .card.small-card
+    .card-header:first-child {
+    border-radius: 0 0 0 0;
+  }
+
+  #searchAndWeather .card .card-body {
+    border-radius: 0 0 0 0;
+  }
+  #searchAndWeather .card.small-card .card-body {
+    border-radius: 0 0 0 0;
+  }
+  #searchAndWeather .col-lg-4:nth-child(3) .card .card-body {
+    border-radius: 0 0 10px 10px;
+  }
+}

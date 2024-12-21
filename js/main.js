@@ -1,4 +1,4 @@
-const API_Key = "f0013059706842a8a97191844240812";
+const API_Key = "6862a3c1342c4717ad0161819242112";
 const weekDays = [
   "Sunday",
   "Monday",
